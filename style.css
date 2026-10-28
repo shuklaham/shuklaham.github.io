@@ -137,6 +137,12 @@ header {
     50% { opacity: 0; }
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .cursor {
+        animation: none;
+    }
+}
+
 .links {
     display: flex;
     flex-wrap: wrap;
@@ -337,6 +343,8 @@ header {
 /* --- Papers / Publications --- */
 .papers {
     margin-bottom: 3rem;
+    border-bottom: 1px dotted var(--border);
+    padding-bottom: 3rem;
 }
 
 .paper {
@@ -434,7 +442,7 @@ header {
 
 .paper-note {
     font-size: 0.75rem;
-    color: #a8a29e;
+    color: var(--text-muted);
     font-style: italic;
     margin-top: 0.2rem;
 }
@@ -521,6 +529,12 @@ header {
 .role-panelist {
     background: #fce7f3;
     color: #9d174d;
+}
+
+/* --- Last section before the footer --- */
+main > section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
 /* --- Footer --- */

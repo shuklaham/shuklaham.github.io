@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shubham Shukla</title>
-    <meta name="description" content="Shubham Shukla | Applied AI @ Nordstrom. Multimodal AI, Recommendation Systems, Vision-Language Models.">
+    <meta name="description" content="Shubham Shukla | Applied AI @ Nordstrom. Building and evaluating LLM agents, vision-language models, and recommendation systems.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shuklaham.github.io/">
+    <meta property="og:title" content="Shubham Shukla">
+    <meta property="og:description" content="Applied AI @ Nordstrom. Building and evaluating LLM agents, vision-language models, and recommendation systems.">
+    <meta property="og:image" content="https://shuklaham.github.io/files/ss_headshot.jpg">
+    <meta name="twitter:card" content="summary">
     <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="favicons/favicon.svg">
     <link rel="shortcut icon" href="favicons/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
     <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap">
     <link rel="stylesheet" href="style.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W799XXLWF4"></script>
@@ -38,11 +47,11 @@
             <div class="header-content">
                 <div class="intro">
                     <h1>Shubham Shukla</h1>
-                    <p class="descriptor">Applied AI @ Nordstrom &middot; Generative AI &middot; Vision-Language Models &middot; Recommendation Systems</p>
+                    <p class="descriptor">Applied AI @ Nordstrom &middot; LLM &amp; Agent Evaluation &middot; Vision-Language Models</p>
                     <div class="tagline">
-                        <p>Building generative and multimodal AI systems that bridge research and production at scale.</p>
-                        <p>Cornell Computing and Information Science.</p>
-                        <p>Reviewer for workshops at NeurIPS, ACL, EMNLP.<span class="cursor">|</span></p>
+                        <p>I design and build AI agents and vision-language systems, and the evaluations that show whether they work.</p>
+                        <p>Previously HealthTap and Amazon &middot; M.S., Cornell University (AI)</p>
+                        <p>Published research on vision-language model evaluation, including a WACV 2026 workshop paper (oral).<span class="cursor" aria-hidden="true">|</span></p>
                     </div>
                     <div class="links">
                         <a href="https://github.com/shuklaham">github</a>
@@ -52,10 +61,10 @@
                     </div>
                 </div>
                 <div class="portrait-container">
-                    <img class="portrait" src="files/ss_headshot.png" alt="Shubham Shukla">
+                    <img class="portrait" src="files/ss_headshot.jpg" alt="Shubham Shukla">
                 </div>
             </div>
-            <p class="callout">Open to collaborations/conversations about generative AI evals, production AI systems, and recommendations at scale. Reach out: shubhamshkl [at] gmail [dot] com</p>
+            <p class="callout">Happy to talk about building and evaluating LLM agents, vision-language models, and recommendation systems.</p>
         </header>
 
         <main>
@@ -63,10 +72,56 @@
             <!-- About -->
             <section class="about">
                 <h2 class="section-title">// about</h2>
-                <p>I build generative and multimodal AI systems at Nordstrom: enterprise RAG platforms, vision-language models, and recommendation engines that serve 33+ million customers. My work focuses on taking AI from research to production at scale.</p>
-                <p>I have an M.S. in Computing &amp; Information Science (AI specialization) from Cornell University. Before Nordstrom, I was at Amazon, where I built product classification models and ML infrastructure for retail, and at HealthTap, where I developed deep learning systems for healthcare, including answer quality prediction for a network of 90,000+ doctors.</p>
-                <p>I review for workshops at NeurIPS, ACL, EMNLP, ICLR, and COLM, and have been a recurring contributor to the AI4 conference series since 2023, first as a panelist, now as a moderator leading sessions on enterprise AI. I am interested in generative AI evaluation, vision-language models, retrieval-augmented generation, and what it takes to deploy research-grade models in production.</p>
-                <p>Broadly, I am drawn to questions about how AI systems behave in the real world: how we evaluate them rigorously, deploy them responsibly, and understand their impact at scale. My work spans an interdisciplinary arc from quantitative finance and clinical NLP to large-scale retail AI, and I believe this cross-domain perspective is essential for building AI systems that are both useful and trustworthy.</p>
+                <p>Colleagues usually come to me with two questions: does this actually work, and can you build it? At Nordstrom I answer both. With my team, I built and scaled NordAssist, an agentic engineering assistant used across Nordstrom engineering: agents that answer from a team's own docs with citations, help with migrations, and diagnose failed pipelines. A blind LLM-as-judge benchmark of the candidate systems informed the architecture of its second version, a decision I owned. I designed agents that mine support threads and open pull requests proposing documentation fixes, with a person approving every change.</p>
+                <p>On the vision side, I led our customer-facing style filters, based on a fine-tuned vision-language model with per-attribute thresholds set to a precision floor, and developed a catalog-correction system that uses a vision-language judge to keep its review queue precise. I also owned the training pipeline for Nordstrom's session-based recommender, and wrote the company's GenAI development standards, which focus on agent evaluation.</p>
+                <p>Before Nordstrom, I built answer-quality models for a network of 90,000+ doctors at HealthTap, and product-classification models and ML infrastructure at Amazon. I have an M.S. in Computing and Information Science (AI) from Cornell, where I created a clinical NLP dashboard for radiologists at Weill Cornell Medicine. I review for NeurIPS, ICLR, ACL, EMNLP, and COLM workshops, and have spoken at AI4 every year since 2023, moderating its generative AI and RAG sessions in 2025 and 2026.</p>
+            </section>
+
+            <!-- Selected Papers (compact, on homepage) -->
+            <section class="papers">
+                <h2 class="section-title">// selected papers</h2>
+
+                <article class="paper">
+                    <span class="year">2026</span>
+                    <div class="paper-content">
+                        <a class="paper-title" href="https://arxiv.org/abs/2601.15711">Zero-Shot Product Attribute Labeling with Vision-Language Models: A Three-Tier Evaluation Framework</a>
+                        <div class="paper-authors"><strong>Shukla, S.</strong>, Sonalkar, K.</div>
+                        <div class="paper-meta">
+                            <span class="paper-venue">IEEE/CVF WACV 2026, PRAW Workshop</span>
+                            <span class="paper-badge">Oral</span>
+                            <span class="paper-links"><a href="https://arxiv.org/abs/2601.15711">paper</a></span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="paper">
+                    <span class="year">2025</span>
+                    <div class="paper-content">
+                        <a class="paper-title" href="https://arxiv.org/abs/2507.09950">Can GPT-4o mini and Gemini 2.0 Flash Predict Fine-Grained Fashion Product Attributes? A Zero-Shot Analysis</a>
+                        <div class="paper-authors"><strong>Shukla, S.</strong>, Sonalkar, K.</div>
+                        <div class="paper-meta">
+                            <span class="paper-venue">arXiv preprint</span>
+                            <span class="paper-links"><a href="https://arxiv.org/abs/2507.09950">paper</a></span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="paper">
+                    <span class="year">2016</span>
+                    <div class="paper-content">
+                        <a class="paper-title" href="https://github.com/shuklaham/priors-visualization">Sunburst: Open Source Radiologist Timeline Dashboard for Summarizing Prior Imaging Reports Using NLP and UMLS</a>
+                        <div class="paper-authors"><strong>Shukla, S.</strong>, Greer, L., Lustbader, E., Chaudhary, J., Gupta, P.</div>
+                        <div class="paper-meta">
+                            <span class="paper-venue">Informatics, RSNA</span>
+                            <span class="paper-links"><a href="https://github.com/shuklaham/priors-visualization">code</a></span>
+                        </div>
+                        <div class="paper-note">Research conducted at Weill Cornell Medicine</div>
+                    </div>
+                </article>
+
+                <div class="all-papers">
+                    <a href="https://scholar.google.com/citations?user=YNJmWM0AAAAJ&hl=en">all papers &rarr;</a>
+                </div>
             </section>
 
             <!-- News -->
@@ -79,11 +134,11 @@
                     </li>
                     <li class="news-item">
                         <span class="news-date">Jan '26</span>
-                        <span class="news-text">Paper accepted at IEEE WACV 2026 (Oral)</span>
+                        <span class="news-text">Paper accepted as an oral at the WACV 2026 Physical Retail AI Workshop</span>
                     </li>
                     <li class="news-item">
                         <span class="news-date">Oct '25</span>
-                        <span class="news-text">Team work featured at GitHub Universe 2025</span>
+                        <span class="news-text">Our team's NordAssist agents featured in a GitHub Universe 2025 session (<a href="https://www.techtarget.com/news/GitHub-Universe-Large-IT-orgs-share-AI-automation-gains/857468/">TechTarget</a>)</span>
                     </li>
                     <li class="news-item">
                         <span class="news-date">Aug '25</span>
@@ -118,63 +173,16 @@
                 <div class="service-group">
                     <div class="service-label">Open Source</div>
                     <div class="service-content">
-                        <a href="https://github.com/microsoft/autogen/pull/5684">Microsoft AutoGen</a> &middot;
-                        <a href="https://github.com/modelcontextprotocol/servers/pull/3306">Model Context Protocol Servers</a>
+                        <a href="https://github.com/microsoft/autogen/pull/5684">Microsoft AutoGen</a> (bug fix) &middot;
+                        <a href="https://github.com/modelcontextprotocol/servers/pull/3306">Model Context Protocol Servers</a> (docs)
                     </div>
-                </div>
-            </section>
-
-            <!-- Selected Papers (compact, on homepage) -->
-            <section class="papers">
-                <h2 class="section-title">// selected papers</h2>
-
-                <article class="paper">
-                    <span class="year">2026</span>
-                    <div class="paper-content">
-                        <a class="paper-title" href="https://arxiv.org/abs/2601.15711">Zero-Shot Product Attribute Labeling with Vision-Language Models: A Three-Tier Evaluation Framework</a>
-                        <div class="paper-authors">Shukla, S., et al.</div>
-                        <div class="paper-meta">
-                            <span class="paper-venue">IEEE/CVF WACV 2026, PRAW Workshop</span>
-                            <span class="paper-badge">Oral</span>
-                            <span class="paper-links"><a href="https://arxiv.org/abs/2601.15711">paper</a></span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="paper">
-                    <span class="year">2025</span>
-                    <div class="paper-content">
-                        <a class="paper-title" href="https://arxiv.org/abs/2507.09950">Can GPT-4o mini and Gemini 2.0 Flash Predict Fine-Grained Fashion Product Attributes? A Zero-Shot Analysis</a>
-                        <div class="paper-authors">Shukla, S., et al.</div>
-                        <div class="paper-meta">
-                            <span class="paper-venue">arXiv preprint</span>
-                            <span class="paper-links"><a href="https://arxiv.org/abs/2507.09950">paper</a></span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="paper">
-                    <span class="year">2016</span>
-                    <div class="paper-content">
-                        <a class="paper-title" href="https://bit.ly/radiologynlp">Sunburst: Open Source Radiologist Timeline Dashboard for Summarizing Prior Imaging Reports Using NLP and UMLS</a>
-                        <div class="paper-authors">Shukla, S., Greer, L., Lustbader, E., Chaudhary, J., Gupta, P.</div>
-                        <div class="paper-meta">
-                            <span class="paper-venue">Informatics, RSNA</span>
-                            <span class="paper-links"><a href="https://bit.ly/radiologynlp">code</a></span>
-                        </div>
-                        <div class="paper-note">Research conducted at Weill Cornell Medicine</div>
-                    </div>
-                </article>
-
-                <div class="all-papers">
-                    <a href="https://scholar.google.com/citations?user=YNJmWM0AAAAJ&hl=en">all papers &rarr;</a>
                 </div>
             </section>
 
         </main>
 
         <footer>
-            &copy; 2026 &middot; built with claude ❤️
+            &copy; 2026 &middot; built with Claude ❤️
         </footer>
 
     </div>
